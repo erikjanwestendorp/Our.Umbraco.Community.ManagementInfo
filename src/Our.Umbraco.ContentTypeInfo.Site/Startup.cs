@@ -1,3 +1,5 @@
+using Our.Umbraco.ContentTypeInfo.Core.ContentApps;
+
 namespace Our.Umbraco.ContentTypeInfo.Site
 {
     public class Startup
@@ -33,6 +35,7 @@ namespace Our.Umbraco.ContentTypeInfo.Site
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .AddContentApp<ContentTypeInfoApp>()
                 .Build();
         }
 
