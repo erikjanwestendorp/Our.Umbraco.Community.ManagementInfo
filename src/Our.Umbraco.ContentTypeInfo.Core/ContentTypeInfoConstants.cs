@@ -1,7 +1,12 @@
 ﻿namespace Our.Umbraco.ContentTypeInfo.Core;
 
-internal class ContentTypeInfoConstants
+public class ContentTypeInfoConstants
 {
+    public static class Package
+    {
+        public const string Name = "ContentTypeInfo";
+        public const string PluginPath = "/App_Plugins/ContentTypeInfo";
+    }
     public static class Apps
     {
         public static class DocumentTypeInfo

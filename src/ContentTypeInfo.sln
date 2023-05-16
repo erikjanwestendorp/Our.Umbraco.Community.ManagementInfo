@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.ContentTypeInfo.Site", "Our.Umbraco.ContentTypeInfo.Site\Our.Umbraco.ContentTypeInfo.Site.csproj", "{E2D03ECE-154F-4F4B-9AC3-79C85BB6F932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.ContentTypeInfo.Core", "Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj", "{2D1F3057-611F-471E-8700-A72ED41CC2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.ContentTypeInfo.Core", "Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj", "{2D1F3057-611F-471E-8700-A72ED41CC2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.ContentTypeInfo.Assets", "Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.ContentTypeInfo.Assets.csproj", "{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2D1F3057-611F-471E-8700-A72ED41CC2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D1F3057-611F-471E-8700-A72ED41CC2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D1F3057-611F-471E-8700-A72ED41CC2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
