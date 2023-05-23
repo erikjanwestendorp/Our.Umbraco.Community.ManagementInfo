@@ -18,7 +18,7 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Build project
-      run: dotnet build ./Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release
+      run: dotnet build ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release
 
     - name: Pack NuGet package
       run: dotnet pack --configuration Release --no-build
