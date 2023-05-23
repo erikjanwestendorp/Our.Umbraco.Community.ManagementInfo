@@ -21,4 +21,4 @@ jobs:
       run: dotnet build ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release
 
     - name: Pack NuGet package
-      run: dotnet pack --configuration Release --no-build
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build
