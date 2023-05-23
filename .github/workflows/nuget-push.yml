@@ -1,40 +1,24 @@
-name: pack and push.
+name: NuGet Publish
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-    
-jobs:
-  build:
-    runs-on: windows-latest 
+  release:
+    types: [created]
 
-    env:
-      CONFIG: 'Release'
-      SOLUTION_FILE: './ContentTypeInfo.sln'
-      OUT_FOLDER: './build.out/'
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
 
     steps:
-    
-    - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup@v0.9.7
-      with:
-        versionSpec: '5.x'    
-    
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0   
-    
-    - name: Determine Version with GitVersion (MSBuild in Proj will do this)
-      id:   gitversion
-      uses: gittools/actions/gitversion/execute@v0.9.15
-      with:
-        useConfigFile: true
-        configFilePath: ./GitVersion.yml
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-    - name: Display GitVersion SemVer
-      run: |
-       echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
-              
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Build project
+      run: dotnet build --configuration Release
+
+    - name: Pack NuGet package
+      run: dotnet pack --configuration Release --no-build
