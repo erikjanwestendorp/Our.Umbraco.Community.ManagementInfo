@@ -22,3 +22,8 @@ jobs:
 
     - name: Pack NuGet package
       run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build
+
+    - name: Push NuGet package
+      run: dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
