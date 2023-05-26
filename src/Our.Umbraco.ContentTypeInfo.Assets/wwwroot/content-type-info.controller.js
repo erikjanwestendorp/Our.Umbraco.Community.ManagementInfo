@@ -1,21 +1,27 @@
 ﻿(function () {
     'use strict';
 
-    function contentTypeInfoController($scope, $routeParams) {
+    function contentTypeInfoController($scope, $routeParams, userService, dateHelper) {
 
         var vm = this;
         vm.showInfo = true;
 
         function init() {
-            vm.key = $scope.model.key;
-            vm.id = $scope.model.id;
-            vm.createDate = $scope.model.createDate;
-            vm.updateDate = $scope.model.updateDate;
-            vm.udi = $scope.model.udi;
 
             if ($routeParams.create) {
-                vm.showInfo = false;                
+                vm.showInfo = false;
             }
+
+            if (vm.showInfo) {
+                vm.key = $scope.model.key;
+                vm.id = $scope.model.id;
+                vm.udi = $scope.model.udi;
+                userService.getCurrentUser().then(currentUser => {
+                    vm.createDate = dateHelper.getLocalDate($scope.model.createDate, currentUser.locale, 'LLL');
+                    vm.updateDate = dateHelper.getLocalDate($scope.model.updateDate, currentUser.locale, 'LLL');
+                });
+            }
+
         }
 
         init();
