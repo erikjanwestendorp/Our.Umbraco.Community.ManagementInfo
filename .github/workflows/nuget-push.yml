@@ -17,22 +17,28 @@ jobs:
       with:
         dotnet-version: '7.0.x'
 
-    - name: Build project ContentTypeInfo
-      run: dotnet build ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release
-  
     - name: Determine release version
       id: release
       run: |
         echo "::set-output name=version::$(echo ${GITHUB_REF#refs/tags/})"
       
+    - name: Build project ContentTypeInfo
+      run: dotnet build ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release /p:Version=${{ steps.release.outputs.version }}
+      
+    - name: Build project ContentTypeInfo.Core
+      run: dotnet build ./src/Our.Umbraco.ContentTypeInfo.Core/Our.Umbraco.ContentTypeInfo.Core.csproj --configuration Release /p:Version=${{ steps.release.outputs.version }}
+      
+    - name: Build project ContentTypeInfo.Assets
+      run: dotnet build ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release /p:Version=${{ steps.release.outputs.version }}
+      
     - name: Pack NuGet package ContentTypeInfo
-      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build --version ${{ steps.release.outputs.version }}
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build
       
     - name: Pack NuGet package ContentTypeInfo.Core
-      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Core/Our.Umbraco.ContentTypeInfo.Core.csproj --configuration Release --no-build --version ${{ steps.release.outputs.version }}
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Core/Our.Umbraco.ContentTypeInfo.Core.csproj --configuration Release --no-build
       
     - name: Pack NuGet package ContentTypeInfo.Assets
-      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release --no-build --version ${{ steps.release.outputs.version }}
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release --no-build
 
     - name: Push NuGet package ContentTypeInfo
       run: dotnet nuget push ./src/Our.Umbraco.ContentTypeInfo/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
