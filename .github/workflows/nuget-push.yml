@@ -34,5 +34,11 @@ jobs:
     - name: Pack NuGet package ContentTypeInfo.Assets
       run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release --no-build --version ${{ steps.release.outputs.version }}
 
-    - name: Push NuGet package
-      run: dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
+    - name: Push NuGet package ContentTypeInfo
+      run: dotnet nuget push ./src/Our.Umbraco.ContentTypeInfo/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+    - name: Push NuGet package ContentTypeInfo.Core
+      run: dotnet nuget push ./src/Our.Umbraco.ContentTypeInfo.Core/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+    - name: Push NuGet package ContentTypeInfo.Assets
+      run: dotnet nuget push ./src/Our.Umbraco.ContentTypeInfo.Assets/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
