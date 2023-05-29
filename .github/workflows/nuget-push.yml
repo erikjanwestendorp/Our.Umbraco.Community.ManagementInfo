@@ -22,7 +22,8 @@ jobs:
   
     - name: Determine release version
       id: release
-      run: echo "::set-output name=version::${{ github.ref }}"
+      run: |
+        echo "::set-output name=version::$(echo ${GITHUB_REF#refs/tags/})"
       
     - name: Pack NuGet package ContentTypeInfo
       run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build --version ${{ steps.release.outputs.version }}
