@@ -20,6 +20,10 @@ jobs:
     - name: Build project ContentTypeInfo
       run: dotnet build ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release
   
+    - name: Determine release version
+      id: release
+      run: echo "::set-output name=version::${{ github.ref }}"
+      
     - name: Pack NuGet package ContentTypeInfo
       run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build
       
