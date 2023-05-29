@@ -32,13 +32,13 @@ jobs:
       run: dotnet build ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release /p:Version=${{ steps.release.outputs.version }}
       
     - name: Pack NuGet package ContentTypeInfo
-      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build --version-suffix ""
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo/Our.Umbraco.ContentTypeInfo.csproj --configuration Release --no-build --version ${GITHUB_REF#refs/tags/}
       
     - name: Pack NuGet package ContentTypeInfo.Core
-      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Core/Our.Umbraco.ContentTypeInfo.Core.csproj --configuration Release --no-build --version-suffix ""
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Core/Our.Umbraco.ContentTypeInfo.Core.csproj --configuration Release --no-build --version ${GITHUB_REF#refs/tags/}
       
     - name: Pack NuGet package ContentTypeInfo.Assets
-      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release --no-build --version-suffix ""
+      run: dotnet pack ./src/Our.Umbraco.ContentTypeInfo.Assets/Our.Umbraco.ContentTypeInfo.Assets.csproj --configuration Release --no-build --version ${GITHUB_REF#refs/tags/}
 
     - name: Push NuGet package ContentTypeInfo
       run: dotnet nuget push ./src/Our.Umbraco.ContentTypeInfo/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
