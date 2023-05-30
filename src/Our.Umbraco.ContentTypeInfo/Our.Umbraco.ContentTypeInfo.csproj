@@ -1,14 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.ContentTypeInfo.Assets.csproj" />
-    <ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj" />
-  </ItemGroup>
+		<PackageTags>umbraco umbraco-marketplace</PackageTags>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.ContentTypeInfo.Assets.csproj" />
+		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj" />
+	</ItemGroup>
 
 </Project>
