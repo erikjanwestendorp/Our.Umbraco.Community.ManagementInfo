@@ -13,7 +13,7 @@
 		<PackageProjectUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageReadmeFile>..\README.md</PackageReadmeFile>
+		<PackageReadmeFile>..\..\README.md</PackageReadmeFile>
 
 
 	</PropertyGroup>
