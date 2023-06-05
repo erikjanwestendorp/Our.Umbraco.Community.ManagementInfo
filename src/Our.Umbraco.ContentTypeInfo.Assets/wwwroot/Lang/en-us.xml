@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+	<area alias="contentTypeInfo">
+		<key alias="lastUpdateDate">Last update date</key>
+		<key alias="createDate">Create date</key>
+	</area>
+</language>
