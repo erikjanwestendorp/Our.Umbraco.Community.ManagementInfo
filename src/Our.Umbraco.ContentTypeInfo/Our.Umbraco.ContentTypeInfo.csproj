@@ -5,7 +5,16 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
+		<Authors>Erik-Jan Westendorp</Authors>
+		<Product>Our.Umbraco.ContentTypeInfo</Product>
+		<PackageId>Our.Umbraco.ContentTypeInfo</PackageId>
+		<Title>Content Type Information</Title>
 		<PackageTags>umbraco umbraco-marketplace</PackageTags>
+		<PackageProjectUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
 
 	</PropertyGroup>
 
