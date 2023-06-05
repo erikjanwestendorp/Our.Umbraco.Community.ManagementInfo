@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -13,7 +13,7 @@
 		<PackageProjectUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageReadmeFile>..\..\README.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 
 	</PropertyGroup>
@@ -23,4 +23,10 @@
 		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>true</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 </Project>
