@@ -6,8 +6,6 @@ Small package that adds a content app to your Umbraco installation. This info co
 - Create Date
 - Update Date
 - UDI
- 
-![image](https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo/assets/7831614/c96a5bb2-d597-4ad3-8905-61b4c638d9c0)
 
 ## Enable Content App
 After installing the package, you can make the Content App visible by registering it in the `Startup.cs` class.
