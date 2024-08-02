@@ -23,9 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="wwwroot\info.html" />
-		<None Include="wwwroot\content-type-info.controller.js" />
-		<None Include="wwwroot\Lang\*" />
+	  <Folder Include="wwwroot\" />
 	</ItemGroup>
 
 </Project>
