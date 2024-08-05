@@ -1,4 +1,4 @@
-# Our.Umbraco.ContentTypeInfo
+# Our.Umbraco.Community.ManagementInfo
 
 Small package that adds a content app to your Umbraco installation. This info content app will appear for Content Types only and give some extra information like:
 
