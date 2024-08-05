@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.ContentTypeInfo.Site", "Our.Umbraco.ContentTypeInfo.Site\Our.Umbraco.ContentTypeInfo.Site.csproj", "{E2D03ECE-154F-4F4B-9AC3-79C85BB6F932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.Community.ManagementInfo.Site", "Our.Umbraco.Community.ManagementInfo.Site\Our.Umbraco.Community.ManagementInfo.Site.csproj", "{E2D03ECE-154F-4F4B-9AC3-79C85BB6F932}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.ContentTypeInfo.Core", "Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj", "{2D1F3057-611F-471E-8700-A72ED41CC2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.Community.ManagementInfo.Core", "Our.Umbraco.Community.ManagementInfo.Core\Our.Umbraco.Community.ManagementInfo.Core.csproj", "{2D1F3057-611F-471E-8700-A72ED41CC2F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.ContentTypeInfo.Assets", "Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.ContentTypeInfo.Assets.csproj", "{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.Community.ManagementInfo.Assets", "Our.Umbraco.Community.ManagementInfo.Assets\Our.Umbraco.Community.ManagementInfo.Assets.csproj", "{16EAEF8F-4E9A-47FD-BA2D-831AAB2C72AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.ContentTypeInfo", "Our.Umbraco.ContentTypeInfo\Our.Umbraco.ContentTypeInfo.csproj", "{7D787CE6-3789-4963-A9B3-12813BD69E24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.Community.ManagementInfo", "Our.Umbraco.Community.ManagementInfo\Our.Umbraco.Community.ManagementInfo.csproj", "{7D787CE6-3789-4963-A9B3-12813BD69E24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62E7B707-302A-4675-A741-E915B8E1E950}
 	EndGlobalSection
 EndGlobal

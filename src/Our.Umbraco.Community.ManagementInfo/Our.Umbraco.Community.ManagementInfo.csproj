@@ -19,8 +19,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.ContentTypeInfo.Assets.csproj" />
-		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.ContentTypeInfo.Core.csproj" />
+		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.Community.ManagementInfo.Assets.csproj" />
+		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.Community.ManagementInfo.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

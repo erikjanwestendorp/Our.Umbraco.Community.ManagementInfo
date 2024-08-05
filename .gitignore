@@ -1,4 +1,4 @@
 ﻿*.vs
 *bin
 *obj
-/src/Our.Umbraco.ContentTypeInfo.Site/Properties
+/src/Our.Umbraco.Community.ManagementInfo.Site/Properties
