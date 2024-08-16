@@ -6,27 +6,27 @@
 		<Nullable>enable</Nullable>
 
 		<Authors>Erik-Jan Westendorp</Authors>
-		<Product>Our.Umbraco.ContentTypeInfo</Product>
-		<PackageId>Our.Umbraco.ContentTypeInfo</PackageId>
+		<Product>Our.Umbraco.Community.ManagementInfo</Product>
+		<PackageId>Our.Umbraco.Community.ManagementInfo</PackageId>
 		<Title>Content Type Information</Title>
 		<PackageTags>umbraco umbraco-marketplace</PackageTags>
-		<PackageProjectUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/erikjanwestendorp/Our.Umbraco.ContentTypeInfo</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/erikjanwestendorp/Our.Umbraco.Community.ManagementInfo</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/erikjanwestendorp/Our.Umbraco.Community.ManagementInfo</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-
-
 	</PropertyGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Assets\Our.Umbraco.Community.ManagementInfo.Assets.csproj" />
-		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.Community.ManagementInfo.Core.csproj" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\..\README.md">
 			<Pack>true</Pack>
 			<PackagePath></PackagePath>
 		</None>
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Our.Umbraco.Community.ManagementInfo.Assets\Our.Umbraco.Community.ManagementInfo.Assets.csproj" />
+	  <ProjectReference Include="..\Our.Umbraco.Community.ManagementInfo.Core\Our.Umbraco.Community.ManagementInfo.Core.csproj" />
 	</ItemGroup>
 </Project>

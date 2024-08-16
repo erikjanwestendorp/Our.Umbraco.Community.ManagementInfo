@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
-		<StaticWebAssetBasePath>App_Plugins/ContentTypeInfo</StaticWebAssetBasePath>
+		<StaticWebAssetBasePath>App_Plugins/ManagementInfo</StaticWebAssetBasePath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -12,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Our.Umbraco.ContentTypeInfo.Core\Our.Umbraco.Community.ManagementInfo.Core.csproj" />
+		<ProjectReference Include="..\Our.Umbraco.Community.ManagementInfo.Core\Our.Umbraco.Community.ManagementInfo.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -23,8 +23,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="wwwroot\info.html" />
-		<None Include="wwwroot\content-type-info.controller.js" />
 		<None Include="wwwroot\Lang\*" />
 	</ItemGroup>
 

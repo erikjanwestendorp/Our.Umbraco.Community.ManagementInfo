@@ -1,4 +1,4 @@
-﻿namespace Our.Umbraco.ContentTypeInfo.Core;
+﻿namespace Our.Umbraco.Community.ManagementInfo.Core;
 
 public class ContentTypeInfoConstants
 {
