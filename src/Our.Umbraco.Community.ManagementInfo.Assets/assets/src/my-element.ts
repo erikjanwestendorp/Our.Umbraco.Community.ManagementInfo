@@ -7,9 +7,8 @@ export default class MyWorspaceViewElement extends UmbElementMixin(LitElement) {
     render() {
         return html`     
      <uui-box headline="Document Type Definition">
-       TODO
-      </uui-box>            
-    `
+       <umb-code-block language="JSON" copy>{}</umb-code-block>
+      </uui-box>    `
     }
 
     static styles = css`
