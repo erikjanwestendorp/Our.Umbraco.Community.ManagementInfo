@@ -1,26 +1,26 @@
-import { LitElement as i, html as p, css as u, customElement as f } from "@umbraco-cms/backoffice/external/lit";
+import { LitElement as s, html as u, css as c, customElement as p } from "@umbraco-cms/backoffice/external/lit";
 import { UmbElementMixin as a } from "@umbraco-cms/backoffice/element-api";
-var c = Object.defineProperty, v = Object.getOwnPropertyDescriptor, x = (l, r, o, t) => {
-  for (var e = t > 1 ? void 0 : t ? v(r, o) : r, s = l.length - 1, m; s >= 0; s--)
-    (m = l[s]) && (e = (t ? m(r, o, e) : m(e)) || e);
-  return t && e && c(r, o, e), e;
+var b = Object.defineProperty, f = Object.getOwnPropertyDescriptor, v = (i, r, t, o) => {
+  for (var e = o > 1 ? void 0 : o ? f(r, t) : r, l = i.length - 1, m; l >= 0; l--)
+    (m = i[l]) && (e = (o ? m(r, t, e) : m(e)) || e);
+  return o && e && b(r, t, e), e;
 };
-let n = class extends a(i) {
+let n = class extends a(s) {
   render() {
-    return p`     
-     <uui-box headline="Document Type Info">
-       ToDO
+    return u`     
+     <uui-box headline="Document Type Definition">
+       <umb-code-block language="JSON" copy>{}</umb-code-block>
       </uui-box>            
     `;
   }
 };
-n.styles = u`
+n.styles = c`
     uui-box {
       margin: 20px;
     }
   `;
-n = x([
-  f("my-workspaceview")
+n = v([
+  p("my-workspaceview")
 ], n);
 export {
   n as default
