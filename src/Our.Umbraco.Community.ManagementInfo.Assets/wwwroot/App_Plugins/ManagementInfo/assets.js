@@ -1,44 +1,63 @@
-import { LitElement as u, html as m, css as l, customElement as p } from "@umbraco-cms/backoffice/external/lit";
-import { UmbElementMixin as a } from "@umbraco-cms/backoffice/element-api";
-import { UMB_WORKSPACE_CONTEXT as y } from "@umbraco-cms/backoffice/workspace";
-import { UmbDocumentTypeDetailRepository as f } from "@umbraco-cms/backoffice/document-type";
-var d = Object.defineProperty, h = Object.getOwnPropertyDescriptor, b = (r, n, t, o) => {
-  for (var e = o > 1 ? void 0 : o ? h(n, t) : n, s = r.length - 1, i; s >= 0; s--)
-    (i = r[s]) && (e = (o ? i(n, t, e) : i(e)) || e);
-  return o && e && d(n, t, e), e;
+import { LitElement as y, html as m, css as a, customElement as c } from "@umbraco-cms/backoffice/external/lit";
+import { UmbElementMixin as u } from "@umbraco-cms/backoffice/element-api";
+import { UMB_WORKSPACE_CONTEXT as l } from "@umbraco-cms/backoffice/workspace";
+import { UmbDocumentTypeDetailRepository as b } from "@umbraco-cms/backoffice/document-type";
+import { UmbMediaTypeDetailRepository as h } from "@umbraco-cms/backoffice/media-type";
+import { UmbDataTypeDetailRepository as f } from "@umbraco-cms/backoffice/data-type";
+import { UmbMemberTypeDetailRepository as d } from "@umbraco-cms/backoffice/member-type";
+var T = Object.defineProperty, w = Object.getOwnPropertyDescriptor, U = (i, r, o, t) => {
+  for (var e = t > 1 ? void 0 : t ? w(r, o) : r, s = i.length - 1, n; s >= 0; s--)
+    (n = i[s]) && (e = (t ? n(r, o, e) : n(e)) || e);
+  return t && e && T(r, o, e), e;
 };
-let c = class extends a(u) {
-  // Initialize with an empty JSON object
+let p = class extends u(y) {
   constructor() {
-    super(), this.documentTypeJson = "{}", console.log("data", this.dataset), this.consumeContext(y, async (r) => {
-      const t = r.getUnique();
-      if (console.log(t), t) {
-        const o = new f(this);
+    super(), this.documentTypeJson = "{}", this.entityType = "", this.consumeContext(l, async (i) => {
+      const r = i, o = r.getUnique();
+      if (this.entityType = r.getEntityType(), o) {
+        let t;
+        switch (this.entityType) {
+          case "document-type":
+            t = new b(this);
+            break;
+          case "media-type":
+            t = new h(this);
+            break;
+          case "data-type":
+            t = new f(this);
+            break;
+          case "member-type":
+            t = new d(this);
+            break;
+          default:
+            console.error("Unsupported entity type:", r.getEntityType());
+            return;
+        }
         try {
-          const e = await o.requestByUnique(t);
-          e && (this.documentTypeJson = JSON.stringify(e, null, 2), this.requestUpdate());
+          const e = await t.requestByUnique(o);
+          e && (this.documentTypeJson = JSON.stringify(e.data, null, 2), this.requestUpdate());
         } catch (e) {
-          console.error("Error fetching document type details:", e);
+          console.error("Error fetching entity details:", e);
         }
       }
     });
   }
   render() {
     return m`     
-        <uui-box headline="Document Type Definition">
+        <uui-box headline="${this.entityType}">
             <umb-code-block language="JSON" copy>${this.documentTypeJson}</umb-code-block>
         </uui-box>`;
   }
 };
-c.styles = l`
+p.styles = a`
     uui-box {
         margin: 20px;
     }
   `;
-c = b([
-  p("my-workspaceview")
-], c);
+p = U([
+  c("my-workspaceview")
+], p);
 export {
-  c as default
+  p as default
 };
 //# sourceMappingURL=assets.js.map
