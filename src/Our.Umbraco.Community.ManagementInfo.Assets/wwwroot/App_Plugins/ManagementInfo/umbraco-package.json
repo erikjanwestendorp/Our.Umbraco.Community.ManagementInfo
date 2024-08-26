@@ -20,6 +20,60 @@
             "match": "Umb.Workspace.DocumentType"
           }
         ]
+      },
+      {
+        "type": "workspaceView",
+        "alias": "MyMediaType.WorkspaceView",
+        "name": "My Media Type Workspace View",
+        "element": "/App_Plugins/ManagementInfo/assets.js",
+        "elementName": "my-element",
+        "meta": {
+          "label": "Definition",
+          "pathname": "/my-workspace-view",
+          "icon": "icon-code"
+        },
+        "conditions": [
+          {
+            "alias": "Umb.Condition.WorkspaceAlias",
+            "match": "Umb.Workspace.MediaType"
+          }
+        ]
+      },
+      {
+        "type": "workspaceView",
+        "alias": "MyDataType.WorkspaceView",
+        "name": "My Data Type Workspace View",
+        "element": "/App_Plugins/ManagementInfo/assets.js",
+        "elementName": "my-element",
+        "meta": {
+          "label": "Definition",
+          "pathname": "/my-workspace-view",
+          "icon": "icon-code"
+        },
+        "conditions": [
+          {
+            "alias": "Umb.Condition.WorkspaceAlias",
+            "match": "Umb.Workspace.DataType"
+          }
+        ]
+      },
+      {
+        "type": "workspaceView",
+        "alias": "MyMemberType.WorkspaceView",
+        "name": "My Member Type Workspace View",
+        "element": "/App_Plugins/ManagementInfo/assets.js",
+        "elementName": "my-element",
+        "meta": {
+          "label": "Definition",
+          "pathname": "/my-workspace-view",
+          "icon": "icon-code"
+        },
+        "conditions": [
+          {
+            "alias": "Umb.Condition.WorkspaceAlias",
+            "match": "Umb.Workspace.MemberType"
+          }
+        ]
       }
     ]
 }
