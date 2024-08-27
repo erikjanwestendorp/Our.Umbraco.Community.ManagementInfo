@@ -5,8 +5,8 @@
     "extensions": [
       {
         "type": "workspaceView",
-        "alias": "My.WorkspaceView",
-        "name": "My Workspace View",
+        "alias": "DocumentTypeDefinition.WorkspaceView",
+        "name": "Document Type Definition Workspace View",
         "element": "/App_Plugins/ManagementInfo/assets.js",
         "elementName": "my-element",
         "meta": {
@@ -23,8 +23,8 @@
       },
       {
         "type": "workspaceView",
-        "alias": "MyMediaType.WorkspaceView",
-        "name": "My Media Type Workspace View",
+        "alias": "MediaTypeDefinition.WorkspaceView",
+        "name": "Media Type Definition Workspace View",
         "element": "/App_Plugins/ManagementInfo/assets.js",
         "elementName": "my-element",
         "meta": {
@@ -41,8 +41,8 @@
       },
       {
         "type": "workspaceView",
-        "alias": "MyDataType.WorkspaceView",
-        "name": "My Data Type Workspace View",
+        "alias": "DataTypeDefinition.WorkspaceView",
+        "name": "Data Type Definition Workspace View",
         "element": "/App_Plugins/ManagementInfo/assets.js",
         "elementName": "my-element",
         "meta": {
@@ -59,8 +59,8 @@
       },
       {
         "type": "workspaceView",
-        "alias": "MyMemberType.WorkspaceView",
-        "name": "My Member Type Workspace View",
+        "alias": "MemberTypeDefinition.WorkspaceView",
+        "name": "Member Type Definition Workspace View",
         "element": "/App_Plugins/ManagementInfo/assets.js",
         "elementName": "my-element",
         "meta": {
