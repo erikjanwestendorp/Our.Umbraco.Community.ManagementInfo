@@ -1,1 +1,1 @@
-# Our.Umbraco.Community.ManagementInfo
+# ManagementInfo
