@@ -6,7 +6,7 @@ import { UmbMediaTypeDetailRepository } from '@umbraco-cms/backoffice/media-type
 import { UmbDataTypeDetailRepository } from '@umbraco-cms/backoffice/data-type';
 import { UmbMemberTypeDetailRepository } from '@umbraco-cms/backoffice/member-type';
 
-@customElement('my-workspaceview')
+@customElement('management-info-workspaceview')
 export default class MyWorspaceViewElement extends UmbElementMixin(LitElement) {
 
     private documentTypeJson: string = '{}';
