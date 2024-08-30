@@ -1,16 +1,16 @@
-import { LitElement as y, html as m, css as a, customElement as c } from "@umbraco-cms/backoffice/external/lit";
+import { LitElement as a, html as m, css as y, customElement as c } from "@umbraco-cms/backoffice/external/lit";
 import { UmbElementMixin as u } from "@umbraco-cms/backoffice/element-api";
 import { UMB_WORKSPACE_CONTEXT as l } from "@umbraco-cms/backoffice/workspace";
 import { UmbDocumentTypeDetailRepository as b } from "@umbraco-cms/backoffice/document-type";
-import { UmbMediaTypeDetailRepository as h } from "@umbraco-cms/backoffice/media-type";
-import { UmbDataTypeDetailRepository as f } from "@umbraco-cms/backoffice/data-type";
+import { UmbMediaTypeDetailRepository as f } from "@umbraco-cms/backoffice/media-type";
+import { UmbDataTypeDetailRepository as h } from "@umbraco-cms/backoffice/data-type";
 import { UmbMemberTypeDetailRepository as d } from "@umbraco-cms/backoffice/member-type";
 var T = Object.defineProperty, w = Object.getOwnPropertyDescriptor, U = (i, r, o, t) => {
   for (var e = t > 1 ? void 0 : t ? w(r, o) : r, s = i.length - 1, n; s >= 0; s--)
     (n = i[s]) && (e = (t ? n(r, o, e) : n(e)) || e);
   return t && e && T(r, o, e), e;
 };
-let p = class extends u(y) {
+let p = class extends u(a) {
   constructor() {
     super(), this.documentTypeJson = "{}", this.entityType = "", this.consumeContext(l, async (i) => {
       const r = i, o = r.getUnique();
@@ -21,10 +21,10 @@ let p = class extends u(y) {
             t = new b(this);
             break;
           case "media-type":
-            t = new h(this);
+            t = new f(this);
             break;
           case "data-type":
-            t = new f(this);
+            t = new h(this);
             break;
           case "member-type":
             t = new d(this);
@@ -49,13 +49,13 @@ let p = class extends u(y) {
         </uui-box>`;
   }
 };
-p.styles = a`
+p.styles = y`
     uui-box {
         margin: 20px;
     }
   `;
 p = U([
-  c("my-workspaceview")
+  c("management-info-workspaceview")
 ], p);
 export {
   p as default
